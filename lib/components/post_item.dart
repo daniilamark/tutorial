@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:tutorial/styles/app_text.dart';
 
 class PostItem extends StatelessWidget {
-  const PostItem({super.key});
+  final String user;
+  const PostItem({super.key, required this.user});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+      padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
         children: [
           Row(
@@ -20,13 +21,19 @@ class PostItem extends StatelessWidget {
               const SizedBox(
                 width: 16,
               ),
-              const Text(
-                "Markin Daniil",
+              Text(
+                user,
                 style: AppText.subtitle3,
               ),
             ],
           ),
+          const SizedBox(
+            height: 12,
+          ),
           Image.asset('assets/temp/post1.jpg'),
+          const SizedBox(
+            height: 12,
+          ),
           const Text(
             "data data data data data data data data data data data data",
             style: AppText.subtitle3,

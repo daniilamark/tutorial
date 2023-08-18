@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tutorial/config/app_icons.dart';
+import 'package:tutorial/config/app_strings.dart';
 import 'package:tutorial/pages/home_page.dart';
+import 'package:tutorial/pages/profile_page.dart';
 import 'package:tutorial/styles/app_colors.dart';
 
 class MainPage extends StatefulWidget {
@@ -20,24 +23,24 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/svg/ic_home.svg'),
-            label: 'Home',
+            icon: SvgPicture.asset(AppIcons.icHome),
+            label: AppStrings.home,
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/svg/ic_favorite.svg'),
-            label: 'Favorite',
+            icon: SvgPicture.asset(AppIcons.icFavorite),
+            label: AppStrings.favorites,
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/svg/ic_add.svg'),
-            label: 'Add Post',
+            icon: SvgPicture.asset(AppIcons.icAdd),
+            label: AppStrings.add,
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/svg/ic_messages.svg'),
-            label: 'Messages',
+            icon: SvgPicture.asset(AppIcons.icMessage),
+            label: AppStrings.messages,
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/svg/ic_user.svg'),
-            label: 'User',
+            icon: SvgPicture.asset(AppIcons.icUser),
+            label: AppStrings.user,
           ),
         ],
         currentIndex: currentIndex,
@@ -56,17 +59,15 @@ class _MainPageState extends State<MainPage> {
 
   final pages = [
     HomePage(),
-    Center(
+    const Center(
       child: Text('Favorite'),
     ),
-    Center(
+    const Center(
       child: Text('Add Post'),
     ),
-    Center(
+    const Center(
       child: Text('Messages'),
     ),
-    Center(
-      child: Text('User'),
-    ),
+    const ProfilePage(),
   ];
 }
