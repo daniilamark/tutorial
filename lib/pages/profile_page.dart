@@ -22,7 +22,7 @@ class ProfilePage extends StatelessWidget {
                   Navigator.of(context).pushNamed(AppRoutes.editProfile);
                   break;
                 case ProfileMenu.logout:
-                  print('log out ');
+                  Navigator.of(context).pushNamed(AppRoutes.login);
                   break;
                 default:
               }

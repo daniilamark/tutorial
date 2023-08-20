@@ -4,7 +4,7 @@ import 'package:tutorial/config/app_routes.dart';
 import 'package:tutorial/config/app_strings.dart';
 
 class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
